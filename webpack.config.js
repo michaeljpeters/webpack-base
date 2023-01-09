@@ -1,21 +1,38 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+function relpath(fp) {
+    return path.resolve(__dirname, ...fp.split('/'));
+}
+
 module.exports = {
+    mode: 'production',
     entry: {
-        index: path.resolve(__dirname, 'src', 'index.js'),
+        index: relpath('src/index.js'),
     },
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Example Webapp',
-            template: path.resolve(__dirname, 'src', 'index.html'),
+            template: relpath('src/index.html'),
         }),
     ],
     output: {
         clean: true,
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: relpath('dist'),
+    },
+    devServer: {
+        static: relpath('dist'),
+    },
+    optimization: {
+        // fixes problems when bundling more than one entry
+        runtimeChunk: 'single',
+    },
+    performance: {
+        // hides the performance warnings for now
+        // TODO: proper code splitting
+        hints: false,
     },
     module: {
         rules: [
