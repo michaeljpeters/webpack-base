@@ -15,7 +15,7 @@ module.exports = {
             },
             // css support with `import './styles.css'`
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
             // image support with `import Image from './image.png'`
