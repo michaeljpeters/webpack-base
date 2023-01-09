@@ -19,15 +19,24 @@ module.exports = {
     ],
     output: {
         clean: true,
-        filename: '[name].bundle.js',
+        filename: '[name].[contenthash].bundle.js',
         path: relpath('dist'),
     },
     devServer: {
         static: relpath('dist'),
     },
     optimization: {
-        // fixes problems when bundling more than one entry
+        moduleIds: 'deterministic',
         runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all',
+                },
+            },
+        },
     },
     performance: {
         // hides the performance warnings for now
