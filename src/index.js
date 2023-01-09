@@ -1,8 +1,8 @@
-import { doWork } from "./module.js";
+import { doWork } from './module.js';
 
 function createComponent() {
-    const elem = document.createElement("div");
-    elem.innerText = "Hello, Webpack";
+    const elem = document.createElement('div');
+    elem.innerText = 'Hello, Webpack';
     doWork();
     return elem;
 }
