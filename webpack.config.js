@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         index: path.resolve(__dirname, 'src', 'index.js'),
     },
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Example Webapp',
