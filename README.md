@@ -1,6 +1,6 @@
 Template Webpack Starting Project
 
-Will include support for
+Will (eventually) include support for
 - HTML
 - ESM
 - TypeScript

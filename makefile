@@ -1,7 +1,7 @@
 build:
 	mkdir -p dist
-	cp static/index.html dist/
-	cp src/index.js dist/
+	cp -r static/* dist/
+	cp -r src/* dist/
 
 dev-server:
 	python -m http.server --directory dist/ 8700 
