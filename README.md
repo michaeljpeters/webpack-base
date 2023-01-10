@@ -17,3 +17,6 @@ https://webpack.js.org/guides/getting-started/
 
 ## Launch Scripts
 See `makefile`
+
+## Compilation
+`make build` will compile to `dist/`
