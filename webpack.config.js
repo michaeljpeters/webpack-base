@@ -73,7 +73,8 @@ module.exports = {
         ],
     },
     resolve: {
-        // need to include '.js' for webpack-dev-server resolutions
+        // need '.tsx', '.ts' for typescript support
+        // need to include '.js' for webpack-dev-server resolutions, even with typescript support
         extensions: ['.tsx', '.ts', '.js'],
     },
 };
