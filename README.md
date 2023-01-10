@@ -8,8 +8,11 @@ Includes Support For
 - [x] SASS Imports
 - [x] React
 
-# Getting Started Webpack Guide:
+## Getting Started Webpack Guide:
 https://webpack.js.org/guides/getting-started/
 
-# Development Server
-`python -m http.server 8700`
+## Installation
+`npm install`
+
+## Launch Scripts
+See `makefile`
