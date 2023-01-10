@@ -9,7 +9,7 @@ module.exports = {
     // note: production disables the in-memory cache
     mode: 'development', // 'production',
     entry: {
-        index: relpath('src/index.ts'),
+        index: relpath('src/index.tsx'),
     },
     // enable source mapping (disable for much smaller files)
     devtool: 'inline-source-map',
