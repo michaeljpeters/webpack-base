@@ -1,7 +1,7 @@
 import MushroomCatImage from './mushroom-cat.png';
 
-import Portrait from '../portrait';
 import { FC } from 'react';
+import Portrait from '../portrait';
 
 const App: FC = () => {
     return (
