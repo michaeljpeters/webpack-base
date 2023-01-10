@@ -3,10 +3,10 @@ Template Webpack Starting Project
 Will (eventually) include support for
 - [x] HTML
 - [x] Module Imports
-- [ ] TypeScript
+- [x] TypeScript
+- [x] SASS
+- [x] SASS Imports
 - [ ] React
-- [ ] SASS
-- [ ] SASS Imports
 
 # Getting Started Webpack Guide:
 https://webpack.js.org/guides/getting-started/
