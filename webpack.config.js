@@ -67,8 +67,8 @@ module.exports = {
             },
             // image support with `import Image from './image.png'`
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
+                test: /\.(png|svg|jpe?g|gif)$/i,
+                use: [{ loader: 'file-loader' }],
             },
         ],
     },
