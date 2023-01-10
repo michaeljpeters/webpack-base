@@ -1,4 +1,4 @@
-Template Webpack Starting Project
+# Template Webpack Starting Project
 
 Includes Support For
 - [x] HTML
