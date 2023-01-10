@@ -1,11 +1,12 @@
-import { doWork } from './module.js';
+import { doWork } from './module';
 
 import './index.scss';
 
-function createComponent() {
+function createComponent(): HTMLElement {
     const elem = document.createElement('div');
     elem.innerText = 'Hello, Webpack';
-    doWork();
+    const num = doWork();
+    console.log('work gave', num);
     return elem;
 }
 

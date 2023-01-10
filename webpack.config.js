@@ -9,7 +9,7 @@ module.exports = {
     // note: production disables the in-memory cache
     mode: 'development', // 'production',
     entry: {
-        index: relpath('src/index.js'),
+        index: relpath('src/index.ts'),
     },
     // enable source mapping (disable for much smaller files)
     devtool: 'inline-source-map',
@@ -49,24 +49,31 @@ module.exports = {
     },
     module: {
         rules: [
+            // typescript support
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
             // sass support with `import './styles.scss'`
             {
-                include: relpath('src'),
                 test: /\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             // css support with `import './styles.css'`
             {
-                include: relpath('src'),
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
             // image support with `import Image from './image.png'`
             {
-                include: relpath('src'),
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
         ],
+    },
+    resolve: {
+        // need to include '.js' for webpack-dev-server resolutions
+        extensions: ['.tsx', '.ts', '.js'],
     },
 };
