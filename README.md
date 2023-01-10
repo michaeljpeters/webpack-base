@@ -6,6 +6,7 @@ Includes Support For
 - [x] TypeScript
 - [x] SASS
 - [x] SASS Imports
+- [x] Image Imports
 - [x] React
 
 ## Getting Started Webpack Guide:
